@@ -12,6 +12,7 @@ class ArtistViewController: UIViewController {
     
     let repository = RepositoryLocator.sharedInstance.artistRepository()
     var albums:[Album]?
+    var album:Album?
     
     @IBOutlet weak var artistsTableView: UITableView!
     @IBOutlet weak var nameLbl: UILabel!
@@ -19,6 +20,7 @@ class ArtistViewController: UIViewController {
     @IBOutlet weak var followersLbl: UILabel!
     @IBOutlet weak var artistImage: UIImageView!
     
+    @IBOutlet weak var ArtistProfileHeader: UIView!
     
     var artist:Artist?{
         didSet{
@@ -28,6 +30,9 @@ class ArtistViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ArtistProfileHeader.layer.borderColor = UIColor.gray.cgColor
+        ArtistProfileHeader.layer.borderWidth = 1
+    
 //        repository.getArtist("Muse") { (_ artists:[Artist]?, _ error:NSError?) in
 //        print(artists)
 //        }
@@ -66,7 +71,8 @@ extension ArtistViewController: UISearchBarDelegate, UITableViewDelegate, UITabl
             return (albums?.count)!
         } else {
             return 0
-        }    }
+        }
+    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistTableViewCell", for: indexPath) as! ArtistTableViewCell
@@ -78,6 +84,23 @@ extension ArtistViewController: UISearchBarDelegate, UITableViewDelegate, UITabl
         repository.getArtist(searchText) { (_ artists:[Artist]?, _ error:NSError?) in
             self.artist = artists?.first
         }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat((self.albums?[indexPath.row].cellHeight)! + 70)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        album = self.albums?[indexPath.row]
+        self.performSegue(withIdentifier: "segueGoToSpotify", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! OpenSpotifyViewController
+        destinationVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+//        destinationVC.popoverPresentationController!.delegate = self
+        
+        destinationVC.album = self.album
         
     }
 }

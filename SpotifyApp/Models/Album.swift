@@ -14,6 +14,16 @@ class Album:Mappable{
     var name: String?
     var images: [Image]?
     var available_markets:[String]?
+    var externalsURL:String?
+    var cellHeight: Int?{
+        get{
+            if !((available_markets?.isEmpty)!) {
+                return FLAG_CELL_HEIGHT * (available_markets?.count)!
+            }else{
+                return 0
+            }
+        }
+    }
     
     required init?(map: Map) {
     }
@@ -24,6 +34,10 @@ class Album:Mappable{
         name <- map["name"]
         images <- map["images"]
         available_markets <- map["available_markets"]
+        externalsURL <- map["external_urls.spotify"]
+        
+        
+
     }
     
 }
