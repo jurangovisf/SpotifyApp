@@ -27,17 +27,11 @@ class Album:Mappable{
     
     required init?(map: Map) {
     }
-    
-    // Mappable
     func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         images <- map["images"]
         available_markets <- map["available_markets"]
         externalsURL <- map["external_urls.spotify"]
-        
-        
-
     }
-    
 }

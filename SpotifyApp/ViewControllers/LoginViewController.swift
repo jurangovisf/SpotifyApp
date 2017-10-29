@@ -10,10 +10,10 @@ import UIKit
 import OAuthSwift
 
 class LoginViewController: UIViewController {
-
+    
     var oauthswift: OAuthSwift?
     var token: String?
-
+    
     @IBAction func Login(_ sender: UIButton) {
         self.doOAuthSpotify()
     }
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         )
         self.oauthswift = oauthswift
         oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: self.oauthswift!)
-
+        
         let state = generateState(withLength: 20)
         
         let _ = oauthswift.authorize(

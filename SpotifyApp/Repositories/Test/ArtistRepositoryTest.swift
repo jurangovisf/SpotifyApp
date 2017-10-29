@@ -34,10 +34,19 @@ class ArtistRepositoryTest: IArtistRepository{
     }
     
     func getArtist(_ artistName: String?,token: String?, completionHandler: @escaping ([Artist]?, NSError?) -> Void) {
-        completionHandler(nil, nil)
+        let artists =  Mapper<Artist>().mapArray(JSONString: ArtistsJson)
+        completionHandler(artists, nil)
+        //        let error = Mapper<Message>().map(JSONString: ErrorJson)
+        //        let message = NSError(domain: "com.juliana.spotify.app", code: (error?.status)!, userInfo: ["message":error?.message])
+        //        completionHandler(nil, message)
+        
     }
     func getAlbums(_ id: String?,token: String?, completionHandler: @escaping ([Album]?, NSError?) -> Void) {
-        completionHandler(nil, nil)
+        let albums =  Mapper<Album>().mapArray(JSONString: AlbumsJson)
+        completionHandler(albums, nil)
+        //                let error = Mapper<Message>().map(JSONString: ErrorJson)
+        //                let message = NSError(domain: "com.juliana.spotify.app", code: (error?.status)!, userInfo: ["message":error?.message])
+        //                completionHandler(nil, message)
     }
 }
 

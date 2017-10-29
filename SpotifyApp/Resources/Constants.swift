@@ -11,10 +11,10 @@ import UIKit
 
 public let BASE_URI = BASE_URI_DEV
 let BASE_URI_DEV = "https://api.spotify.com/v1/"
-//let TOKEN = "Bearer BQB6nBH9lL9BJZRK6Opbn2rsJ33Teh58Eelul0maUqhej7AAbyet0kdYhQuSywM2o9KzFPphZDCSVOKyF2fonK4gRxBCgnWuRZJGII3wdplJPKp3M4JmicZ9TQUzf1hkldHTeu5Y8ISzAHlu"
 let FLAG_CELL_HEIGHT = 44
 let CLIENT_ID = "7a9313a6f1cc4b5cb4e163c53674ed67"
 let CLIENT_SECRET = "40f3ae1579f5460cabcac5746fb14d7b"
+let DOMAIN = "com.juliana.SpotifyApp"
 
 let ERROR_CAN_NOT_CONNECT_TO_HOST_CODE = -1004
 let ERROR_NETWORK_CONNECTION_LOST_CODE = -1005

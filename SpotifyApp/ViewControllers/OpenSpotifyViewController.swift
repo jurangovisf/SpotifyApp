@@ -12,14 +12,7 @@ class OpenSpotifyViewController: UIViewController {
     
     @IBOutlet weak var albumImage: UIImageView!
     
-    var album:Album?//{
-//        didSet{
-//            if !((album?.images?.isEmpty)!){
-//                albumImage.downloadedFrom(url: URL(string: album!.images!.first!.url!)!)
-//            }
-//        }
-   // }
-    
+    var album:Album?
     
     @IBAction func OpenSpotify(_ sender: UIButton) {
         if let url = URL(string: (album?.externalsURL)!){
@@ -29,25 +22,13 @@ class OpenSpotifyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                    if !((album?.images?.isEmpty)!){
-                        albumImage.downloadedFrom(url: URL(string: album!.images!.first!.url!)!)
+        if !((album?.images?.isEmpty)!){
+            albumImage.downloadedFrom(url: URL(string: album!.images!.first!.url!)!)
+        }
     }
-}
-
-
     
-
     @IBAction func closePopup(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

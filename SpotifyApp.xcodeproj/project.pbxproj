@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5632D4261FA598CE0098AB43 /* DynamicCellHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632D4251FA598CE0098AB43 /* DynamicCellHeight.swift */; };
+		5632D4281FA659770098AB43 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632D4271FA659770098AB43 /* MockData.swift */; };
+		5632D42A1FA665190098AB43 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632D4291FA665190098AB43 /* Message.swift */; };
 		563A383C1FA3CC71001D026F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A383B1FA3CC71001D026F /* AppDelegate.swift */; };
 		563A383E1FA3CC71001D026F /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A383D1FA3CC71001D026F /* ArtistViewController.swift */; };
 		563A38411FA3CC71001D026F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563A383F1FA3CC71001D026F /* Main.storyboard */; };
@@ -25,7 +28,7 @@
 		563A38821FA3E1B6001D026F /* LocalizatorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A38811FA3E1B6001D026F /* LocalizatorStrings.swift */; };
 		563A38861FA3F911001D026F /* ArtistViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A38851FA3F911001D026F /* ArtistViewCellTableViewCell.swift */; };
 		563A38881FA41224001D026F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563A38871FA41224001D026F /* Album.swift */; };
-		565613281FA42D4F0000AAF1 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565613271FA42D4F0000AAF1 /* AlbumTableViewCell.swift */; };
+		565613281FA42D4F0000AAF1 /* CountriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565613271FA42D4F0000AAF1 /* CountriesCollectionViewCell.swift */; };
 		56CFFFE21FA442D30002EDDB /* OpenSpotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CFFFE11FA442D30002EDDB /* OpenSpotifyViewController.swift */; };
 		56E86C881FA576CA00C7B90E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E86C871FA576CA00C7B90E /* LoginViewController.swift */; };
 		7D1BA0A8C0D64FAB5BBCD175 /* Pods_SpotifyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8ED80CABDAE7F3E424D7FA /* Pods_SpotifyAppTests.framework */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		168BDC0602208B3AD5F1436E /* Pods_SpotifyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F985A67EBB2313F2D0F276 /* Pods-SpotifyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotifyAppTests/Pods-SpotifyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5632D4251FA598CE0098AB43 /* DynamicCellHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCellHeight.swift; sourceTree = "<group>"; };
+		5632D4271FA659770098AB43 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		5632D4291FA665190098AB43 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		563A38381FA3CC71001D026F /* SpotifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563A383B1FA3CC71001D026F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		563A383D1FA3CC71001D026F /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +83,7 @@
 		563A38811FA3E1B6001D026F /* LocalizatorStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizatorStrings.swift; sourceTree = "<group>"; };
 		563A38851FA3F911001D026F /* ArtistViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		563A38871FA41224001D026F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		565613271FA42D4F0000AAF1 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		565613271FA42D4F0000AAF1 /* CountriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		56CFFFE11FA442D30002EDDB /* OpenSpotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSpotifyViewController.swift; sourceTree = "<group>"; };
 		56E86C871FA576CA00C7B90E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8DB271D0C911024F5E086ABD /* Pods-SpotifyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotifyApp/Pods-SpotifyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			children = (
 				563A386A1FA3D302001D026F /* Artist.swift */,
 				563A38871FA41224001D026F /* Album.swift */,
+				5632D4291FA665190098AB43 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 				563A386D1FA3D98F001D026F /* Constants.swift */,
 				563A387F1FA3E16E001D026F /* Localizable.plist */,
 				563A38811FA3E1B6001D026F /* LocalizatorStrings.swift */,
+				5632D4271FA659770098AB43 /* MockData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				563A38781FA3DCE8001D026F /* Extensions.swift */,
+				5632D4251FA598CE0098AB43 /* DynamicCellHeight.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -272,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				563A38851FA3F911001D026F /* ArtistViewCellTableViewCell.swift */,
-				565613271FA42D4F0000AAF1 /* AlbumTableViewCell.swift */,
+				565613271FA42D4F0000AAF1 /* CountriesCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -585,8 +594,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5632D4261FA598CE0098AB43 /* DynamicCellHeight.swift in Sources */,
 				563A38761FA3DC53001D026F /* IArtistRepository.swift in Sources */,
 				563A38821FA3E1B6001D026F /* LocalizatorStrings.swift in Sources */,
+				5632D42A1FA665190098AB43 /* Message.swift in Sources */,
+				5632D4281FA659770098AB43 /* MockData.swift in Sources */,
 				563A386B1FA3D302001D026F /* Artist.swift in Sources */,
 				56E86C881FA576CA00C7B90E /* LoginViewController.swift in Sources */,
 				56CFFFE21FA442D30002EDDB /* OpenSpotifyViewController.swift in Sources */,
@@ -597,7 +609,7 @@
 				563A386E1FA3D98F001D026F /* Constants.swift in Sources */,
 				563A38741FA3DBE7001D026F /* ArtistRepository.swift in Sources */,
 				563A38791FA3DCE8001D026F /* Extensions.swift in Sources */,
-				565613281FA42D4F0000AAF1 /* AlbumTableViewCell.swift in Sources */,
+				565613281FA42D4F0000AAF1 /* CountriesCollectionViewCell.swift in Sources */,
 				563A387E1FA3E0E2001D026F /* RepositoryLocator.swift in Sources */,
 				563A38881FA41224001D026F /* Album.swift in Sources */,
 			);

@@ -12,7 +12,9 @@ class ArtistTableViewCell: UITableViewCell {
     
     @IBOutlet weak var artistImage: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var countriesTableView: UITableView!
+    @IBOutlet weak var countriesCollectionView: UICollectionView!
+    @IBOutlet weak var countriesAvailable: UILabel!
+    @IBOutlet weak var artistCollectionViewWidth: NSLayoutConstraint!
     
     var album:Album!{
         didSet{
@@ -23,27 +25,29 @@ class ArtistTableViewCell: UITableViewCell {
     func updateUI(){
         nameLbl.text = album.name
         if !((album.images?.isEmpty)!){
-            artistImage.downloadedFrom(url: URL(string: album.images!.first!.url!)!)
+            artistImage.downloadedFrom(url: URL(string: album.images!.first!.url!)!, contentMode: UIViewContentMode.scaleToFill)
         }
-
+        if album.available_markets!.count > 5{
+            countriesAvailable.text = "Available in more than five countries"
+        }else{
+            countriesAvailable.text = "Available in less than five countries"
+        }
+        countriesCollectionView.reloadData()
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        countriesTableView.delegate = self
-        countriesTableView.dataSource = self
+        self.countriesCollectionView.delegate = self
+        self.countriesCollectionView.dataSource = self
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
 }
-extension ArtistTableViewCell: UITableViewDataSource,UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ArtistTableViewCell: UICollectionViewDataSource,UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if self.album != nil && self.album.available_markets != nil {
             return (album.available_markets!.count)
         } else {
@@ -51,8 +55,8 @@ extension ArtistTableViewCell: UITableViewDataSource,UITableViewDelegate{
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumViewCell", for: indexPath) as! AlbumTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "countriesViewCell", for: indexPath) as! CountriesCollectionViewCell
         cell.flag = self.album.available_markets?[indexPath.row]
         return cell
     }

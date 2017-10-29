@@ -15,7 +15,7 @@ class Artist: Mappable{
     var images: [Image]?
     var popularity: Int?
     var totalFollowers: Int?
-
+    
     required init?(map: Map) {
     }
     
