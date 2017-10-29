@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotifyApp/ViewControllers/ArtistViewController.swift"
-            timestampString = "530899522.838298"
+            timestampString = "530944196.015205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "artist"
             landmarkType = "24">
          </BreakpointContent>

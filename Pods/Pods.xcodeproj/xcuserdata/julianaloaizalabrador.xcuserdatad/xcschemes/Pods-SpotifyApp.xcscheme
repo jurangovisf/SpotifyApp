@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0F28F0060322AB745D71AA74A5D36FBF"
+               BlueprintIdentifier = "25D529B6F9BA384C29E817594B9C02DF"
                BuildableName = "Pods_SpotifyApp.framework"
                BlueprintName = "Pods-SpotifyApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0F28F0060322AB745D71AA74A5D36FBF"
+            BlueprintIdentifier = "25D529B6F9BA384C29E817594B9C02DF"
             BuildableName = "Pods_SpotifyApp.framework"
             BlueprintName = "Pods-SpotifyApp"
             ReferencedContainer = "container:Pods.xcodeproj">

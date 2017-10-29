@@ -9,6 +9,6 @@
 import Foundation
 
 protocol IArtistRepository {
-    func getArtist(_ artistName: String?,completionHandler:@escaping (_ artists: [Artist]?, _ error: NSError?) -> Void)
-    func getAlbums(_ id: String?,completionHandler:@escaping (_ albums: [Album]?, _ error: NSError?) -> Void)}
+    func getArtist(_ artistName: String?, token: String? ,completionHandler:@escaping (_ artists: [Artist]?, _ error: NSError?) -> Void)
+    func getAlbums(_ id: String?,token: String?,completionHandler:@escaping (_ albums: [Album]?, _ error: NSError?) -> Void)}
 

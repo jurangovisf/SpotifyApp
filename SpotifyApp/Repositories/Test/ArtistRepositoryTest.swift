@@ -33,10 +33,10 @@ class ArtistRepositoryTest: IArtistRepository{
         return Static.instance
     }
     
-    func getArtist(_ artistName: String?, completionHandler: @escaping ([Artist]?, NSError?) -> Void) {
+    func getArtist(_ artistName: String?,token: String?, completionHandler: @escaping ([Artist]?, NSError?) -> Void) {
         completionHandler(nil, nil)
     }
-    func getAlbums(_ id: String?, completionHandler: @escaping ([Album]?, NSError?) -> Void) {
+    func getAlbums(_ id: String?,token: String?, completionHandler: @escaping ([Album]?, NSError?) -> Void) {
         completionHandler(nil, nil)
     }
 }

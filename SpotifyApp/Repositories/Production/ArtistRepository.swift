@@ -34,8 +34,8 @@ class ArtistRepository: IArtistRepository{
         return Static.instance
     }
     
-    func getArtist(_ artistName: String?, completionHandler: @escaping ([Artist]?, NSError?) -> Void) {
-        let header = ["Authorization": TOKEN]
+    func getArtist(_ artistName: String?,token: String?, completionHandler: @escaping ([Artist]?, NSError?) -> Void) {
+        let header = ["Authorization": token!]
         let parameters = ["q":artistName!, "type":"artist"]
         Alamofire.request("\(BASE_URI)search", method: HTTPMethod.get, parameters: parameters, encoding: URLEncoding.queryString, headers: header).validate().responseJSON {
             (response: DataResponse<Any>) in
@@ -57,8 +57,8 @@ class ArtistRepository: IArtistRepository{
 }
     
  
-    func getAlbums(_ id: String?, completionHandler: @escaping ([Album]?, NSError?) -> Void) {
-        let header = ["Authorization": TOKEN]
+    func getAlbums(_ id: String?,token: String?, completionHandler: @escaping ([Album]?, NSError?) -> Void) {
+        let header = ["Authorization": token!]
         Alamofire.request("\(BASE_URI)artists/\(id!)/albums", method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.queryString, headers: header).validate().responseJSON {
             (response: DataResponse<Any>) in
             switch(response.result) {

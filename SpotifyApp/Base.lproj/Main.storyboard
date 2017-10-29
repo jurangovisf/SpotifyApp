@@ -21,12 +21,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4LQ-eF-cSE"/>
+                        <segue destination="9fc-Zx-siK" kind="relationship" relationship="rootViewController" id="tIm-4y-HLQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEv-Kq-cQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-772" y="118"/>
+            <point key="canvasLocation" x="-1694" y="65"/>
         </scene>
         <!--Artist View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -323,5 +323,55 @@
             </objects>
             <point key="canvasLocation" x="1044" y="118"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="E1g-ab-tWS">
+            <objects>
+                <viewController id="9fc-Zx-siK" userLabel="Login" customClass="LoginViewController" customModule="SpotifyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6mX-eJ-Mmg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stI-mF-9bx">
+                                <rect key="frame" x="117.5" y="396.5" width="140" height="30"/>
+                                <color key="backgroundColor" red="0.55239087343215942" green="0.7574499249458313" blue="0.0049400837160646915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="D2G-De-DpY"/>
+                                    <constraint firstAttribute="height" constant="30" id="NuR-dC-7Az"/>
+                                </constraints>
+                                <state key="normal" title="Login in Spotify">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Login:" destination="9fc-Zx-siK" eventType="touchUpInside" id="1aY-zp-ZJ9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpotifyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hEQ-MN-CIp">
+                                <rect key="frame" x="123.5" y="192" width="128" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="stI-mF-9bx" firstAttribute="top" secondItem="hEQ-MN-CIp" secondAttribute="bottom" constant="76.5" id="8cU-lL-uXn"/>
+                            <constraint firstItem="stI-mF-9bx" firstAttribute="centerX" secondItem="hEQ-MN-CIp" secondAttribute="centerX" id="CPl-c4-VIs"/>
+                            <constraint firstItem="hEQ-MN-CIp" firstAttribute="centerY" secondItem="yuU-Eb-bS1" secondAttribute="centerY" multiplier="0.7" id="WrC-Xi-8A8"/>
+                            <constraint firstItem="hEQ-MN-CIp" firstAttribute="centerX" secondItem="yuU-Eb-bS1" secondAttribute="centerX" id="o7V-kf-h18"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yuU-Eb-bS1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SsF-Gg-inR"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showArtistsSegue" id="Mhw-QL-Vc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hw8-5C-z6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="72"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="SpotifyIcon" width="128" height="128"/>
+    </resources>
 </document>

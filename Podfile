@@ -6,6 +6,7 @@ target 'SpotifyApp' do
   use_frameworks!
 
   # Pods for SpotifyApp
+  pod 'OAuthSwift', '~> 1.2.0'
   pod 'Alamofire', '~> 4.5'
   pod 'ObjectMapper', '~> 2.2'
   target 'SpotifyAppTests' do

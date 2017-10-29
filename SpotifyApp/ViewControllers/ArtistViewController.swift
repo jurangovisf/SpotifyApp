@@ -13,6 +13,7 @@ class ArtistViewController: UIViewController {
     let repository = RepositoryLocator.sharedInstance.artistRepository()
     var albums:[Album]?
     var album:Album?
+    var token:String?
     
     @IBOutlet weak var artistsTableView: UITableView!
     @IBOutlet weak var nameLbl: UILabel!
@@ -56,7 +57,7 @@ class ArtistViewController: UIViewController {
     }
     
     func loadAlbums(){
-        repository.getAlbums(artist?.id) { (_ albums:[Album]?, _ error:NSError?) in
+        repository.getAlbums(artist?.id,token: self.token) { (_ albums:[Album]?, _ error:NSError?) in
             self.albums = albums
             self.artistsTableView.reloadData()
         }
@@ -81,7 +82,7 @@ extension ArtistViewController: UISearchBarDelegate, UITableViewDelegate, UITabl
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        repository.getArtist(searchText) { (_ artists:[Artist]?, _ error:NSError?) in
+        repository.getArtist(searchText,token: self.token) { (_ artists:[Artist]?, _ error:NSError?) in
             self.artist = artists?.first
         }
         
@@ -98,8 +99,6 @@ extension ArtistViewController: UISearchBarDelegate, UITableViewDelegate, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! OpenSpotifyViewController
         destinationVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-//        destinationVC.popoverPresentationController!.delegate = self
-        
         destinationVC.album = self.album
         
     }
