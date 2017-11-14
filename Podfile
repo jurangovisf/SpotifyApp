@@ -8,7 +8,7 @@ target 'SpotifyApp' do
   # Pods for SpotifyApp
   pod 'OAuthSwift', '~> 1.2.0'
   pod 'Alamofire', '~> 4.5'
-  pod 'ObjectMapper', '~> 2.2'
+  pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git', :branch => 'swift-4'
   target 'SpotifyAppTests' do
     inherit! :search_paths
     # Pods for testing
