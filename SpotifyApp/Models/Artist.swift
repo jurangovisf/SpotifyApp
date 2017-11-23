@@ -16,6 +16,14 @@ class Artist: Mappable{
     var popularity: Int?
     var totalFollowers: Int?
     
+    init(id: String,name: String, images: [Image]?,popularity: Int, totalFollowers: Int) {
+        self.id = id
+        self.name = name
+        self.images = images
+        self.popularity = popularity
+        self.totalFollowers = totalFollowers
+    }
+    
     required init?(map: Map) {
     }
     

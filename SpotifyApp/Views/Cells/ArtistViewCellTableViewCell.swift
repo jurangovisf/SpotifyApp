@@ -27,12 +27,18 @@ class ArtistTableViewCell: UITableViewCell {
         if !((album.images?.isEmpty)!){
             artistImage.downloadedFrom(url: URL(string: album.images!.first!.url!)!, contentMode: UIViewContentMode.scaleToFill)
         }
-        if album.available_markets!.count > 5{
-            countriesAvailable.text = "Available in more than five countries"
-        }else{
-            countriesAvailable.text = "Available in less than five countries"
-        }
+        countriesAvailable.text = countriesAvailable(album.available_markets!.count)
+
         countriesCollectionView.reloadData()
+        
+    }
+    
+    func countriesAvailable(_ numCountries: Int) -> String{
+        if numCountries > 5 {
+            return "Available in more than five countries"
+        }else{
+            return "Available in less than five countries"
+        }
     }
     
     override func awakeFromNib() {
@@ -46,6 +52,8 @@ class ArtistTableViewCell: UITableViewCell {
     }
     
 }
+
+
 extension ArtistTableViewCell: UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if self.album != nil && self.album.available_markets != nil {

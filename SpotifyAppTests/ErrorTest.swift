@@ -2,11 +2,13 @@
 //  ErrorTest.swift
 //  SpotifyAppTests
 //
-//  Created by Juliana Loaiza on 11/8/17.
+//  Created by Juliana Loaiza on 11/15/17.
 //  Copyright © 2017 Juliana Loaiza Labrador. All rights reserved.
 //
 
 import XCTest
+import ObjectMapper
+@testable import SpotifyApp
 
 class ErrorTest: XCTestCase {
     
@@ -20,16 +22,14 @@ class ErrorTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInit_Error(){
+        let ErrorJson = "{\"error\": {\"status\": 401, \"message\": \"The access token expired\"} }"
+        let error = Mapper<Message>().map(JSONString: ErrorJson)
+        XCTAssertEqual(error?.message, "The access token expired")
+        XCTAssertEqual(error?.status, 401)
+        XCTAssertNotEqual(error?.message, "Error")
+        XCTAssertNotEqual(error?.status, 0)
     }
     
 }
+

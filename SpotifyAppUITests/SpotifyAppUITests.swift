@@ -29,8 +29,20 @@ class SpotifyAppUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let myApp = XCUIApplication()
+
+        XCUIApplication().buttons["Login in Spotify"].tap()
+        let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
+
+        safari.wait(for: .runningForeground, timeout: 20)
+        myApp.activate()
+        
+        let searchArtistSearchField = myApp.searchFields["Search Artist"]
+        searchArtistSearchField.tap()
+        searchArtistSearchField.typeText("Linkin Park")
+        sleep(10)
+        XCTAssertTrue(myApp.staticTexts["One More Light"].exists, "Encontró Linkin Park")
+        
     }
-    
+
 }

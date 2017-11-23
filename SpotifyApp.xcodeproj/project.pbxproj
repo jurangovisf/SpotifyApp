@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A6AB271FC47E4800DD9808 /* ArtistTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A6AB261FC47E4800DD9808 /* ArtistTableViewCellTest.swift */; };
+		43A6AB2D1FC4805C00DD9808 /* AlbumTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A6AB2A1FC4805C00DD9808 /* AlbumTest.swift */; };
+		43A6AB2E1FC4805C00DD9808 /* ErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A6AB2B1FC4805C00DD9808 /* ErrorTest.swift */; };
+		43A6AB2F1FC4805C00DD9808 /* ArtistTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A6AB2C1FC4805C00DD9808 /* ArtistTest.swift */; };
 		5632D4261FA598CE0098AB43 /* DynamicCellHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632D4251FA598CE0098AB43 /* DynamicCellHeight.swift */; };
 		5632D4281FA659770098AB43 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632D4271FA659770098AB43 /* MockData.swift */; };
 		5632D42A1FA665190098AB43 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632D4291FA665190098AB43 /* Message.swift */; };
@@ -55,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		168BDC0602208B3AD5F1436E /* Pods_SpotifyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A6AB261FC47E4800DD9808 /* ArtistTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCellTest.swift; sourceTree = "<group>"; };
+		43A6AB2A1FC4805C00DD9808 /* AlbumTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTest.swift; sourceTree = "<group>"; };
+		43A6AB2B1FC4805C00DD9808 /* ErrorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTest.swift; sourceTree = "<group>"; };
+		43A6AB2C1FC4805C00DD9808 /* ArtistTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTest.swift; sourceTree = "<group>"; };
 		45F985A67EBB2313F2D0F276 /* Pods-SpotifyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotifyAppTests/Pods-SpotifyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5632D4251FA598CE0098AB43 /* DynamicCellHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCellHeight.swift; sourceTree = "<group>"; };
 		5632D4271FA659770098AB43 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -179,8 +187,12 @@
 		563A384F1FA3CC71001D026F /* SpotifyAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				43A6AB2A1FC4805C00DD9808 /* AlbumTest.swift */,
+				43A6AB2C1FC4805C00DD9808 /* ArtistTest.swift */,
+				43A6AB2B1FC4805C00DD9808 /* ErrorTest.swift */,
 				563A38501FA3CC71001D026F /* SpotifyAppTests.swift */,
 				563A38521FA3CC71001D026F /* Info.plist */,
+				43A6AB261FC47E4800DD9808 /* ArtistTableViewCellTest.swift */,
 			);
 			path = SpotifyAppTests;
 			sourceTree = "<group>";
@@ -619,6 +631,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A6AB2E1FC4805C00DD9808 /* ErrorTest.swift in Sources */,
+				43A6AB2F1FC4805C00DD9808 /* ArtistTest.swift in Sources */,
+				43A6AB2D1FC4805C00DD9808 /* AlbumTest.swift in Sources */,
+				43A6AB271FC47E4800DD9808 /* ArtistTableViewCellTest.swift in Sources */,
 				563A38511FA3CC71001D026F /* SpotifyAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,6 +797,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRFNDLT6FX;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SpotifyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.condor.SpotifyApp;
@@ -799,6 +816,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRFNDLT6FX;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SpotifyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.condor.SpotifyApp;
