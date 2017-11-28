@@ -17,6 +17,6 @@ target 'SpotifyApp' do
   target 'SpotifyAppUITests' do
     inherit! :search_paths
     # Pods for testing
+  pod 'XCTest-Gherkin'
   end
-
 end

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "487C703AF251939FBF2C759BD6014C15"
-               BuildableName = "Pods_SpotifyAppUITests.framework"
-               BlueprintName = "Pods-SpotifyAppUITests"
+               BlueprintIdentifier = "74AC5A1388947A2CBB759FBB673ABE2D"
+               BuildableName = "XCTest_Gherkin.framework"
+               BlueprintName = "XCTest-Gherkin"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "487C703AF251939FBF2C759BD6014C15"
-            BuildableName = "Pods_SpotifyAppUITests.framework"
-            BlueprintName = "Pods-SpotifyAppUITests"
+            BlueprintIdentifier = "74AC5A1388947A2CBB759FBB673ABE2D"
+            BuildableName = "XCTest_Gherkin.framework"
+            BlueprintName = "XCTest-Gherkin"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

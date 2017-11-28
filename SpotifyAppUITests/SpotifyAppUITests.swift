@@ -7,42 +7,30 @@
 //
 
 import XCTest
+import XCTest_Gherkin
 
 class SpotifyAppUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        continueAfterFailure = true
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        let myApp = XCUIApplication()
-
-        XCUIApplication().buttons["Login in Spotify"].tap()
-        let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
-
-        safari.wait(for: .runningForeground, timeout: 20)
-        myApp.activate()
-        
-        let searchArtistSearchField = myApp.searchFields["Search Artist"]
-        searchArtistSearchField.tap()
-        searchArtistSearchField.typeText("Linkin Park")
-        sleep(10)
-        XCTAssertTrue(myApp.staticTexts["One More Light"].exists, "Encontró Linkin Park")
-        
+    func testSearchListForValidArtist(){
+        Given("I tap Login Button and Login in Spotify Account")
+        When("I enter artist search for Linkin Park")
+        Then("I wait to see if the artist was found")
     }
-
+    
+    func testSearchListForInvalidArtist(){
+        Given("I tap Login Button and Login in Spotify Account")
+        When("I enter artist search for JASKDJQKWENDA")
+        Then("I wait to see if the artist was not found")
+    }
+    
 }
