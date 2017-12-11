@@ -17,6 +17,8 @@ jobs:
       - run:
           name: Install CocoaPods
           command: pod install
+          name: Update CocoaPods
+          command: pod update
 
       # Build the app and run tests
       - run:
