@@ -19,17 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SpotifyApp.xcscheme</key>
+		<key>Pods-SpotifyApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SpotifyAppTests.xcscheme</key>
+		<key>Pods-SpotifyAppTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SpotifyAppUITests.xcscheme</key>
+		<key>Pods-SpotifyAppUITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
