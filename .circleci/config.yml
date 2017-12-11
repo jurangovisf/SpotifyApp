@@ -17,6 +17,7 @@ jobs:
       - run:
           name: Install CocoaPods
           command: pod install
+      - run:
           name: Update CocoaPods
           command: pod update
 
@@ -26,7 +27,7 @@ jobs:
           command: fastlane scan
           environment:
             SCAN_DEVICE: iPhone 6
-            SCAN_SCHEME: Pods-SpotifyAppTests
+            SCAN_SCHEME: SpotifyAppTests
 	          #SCAN_SCHEME: SpotifyAppUITests
 
       # Collect XML test results data to show in the UI,
