@@ -10,6 +10,7 @@ import Foundation
 import XCTest
 import XCTest_Gherkin
 
+
 class WaitSteps: StepDefiner{
     override func defineSteps() {
         step("I wait to see if the artist was found"){

@@ -1,10 +1,10 @@
 PODS:
-  - Alamofire (4.5.1)
+  - Alamofire (4.6.0)
   - OAuthSwift (1.2.0)
   - ObjectMapper (3.0.0)
-  - XCTest-Gherkin (0.12.0):
-    - XCTest-Gherkin/Core (= 0.12.0)
-  - XCTest-Gherkin/Core (0.12.0)
+  - XCTest-Gherkin (0.13.2):
+    - XCTest-Gherkin/Core (= 0.13.2)
+  - XCTest-Gherkin/Core (0.13.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -23,10 +23,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Hearst-DD/ObjectMapper.git
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
   ObjectMapper: 739e5530df22248823f6cc7ed9e016ebf2c26a27
-  XCTest-Gherkin: 540ce05bb4ed6a285116105398b3025ded6990c1
+  XCTest-Gherkin: 5b5b9c98baed1f889893a8222c47c76557eb705b
 
 PODFILE CHECKSUM: cacb7b7937a82eac9d5190fbd49cb0a96f4f36b3
 
