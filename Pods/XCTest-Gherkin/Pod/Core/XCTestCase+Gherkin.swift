@@ -24,32 +24,31 @@ class GherkinState {
     var steps = Set<Step>()
     
     // Used to track step nesting i.e. steps calling out to other steps
-    var currentStepDepth:Int = 0
+    var currentStepDepth: Int = 0
     
     // When we are in an Outline block, this defines the examples to loop over
-    var examples:[Example]? = nil
+    var examples: [Example]?
     
     // The current example the Outline is running over
-    var currentExample:Example? = nil
+    var currentExample: Example?
     
     // Store the name of the current test to help debugging output
-    var currentTestName:String = "NO TESTS RUN YET"
+    var currentTestName: String = "NO TESTS RUN YET"
     
     // Store the name of the current step to help debugging output
-    var currentStepName:String = "NO CURRENT STEP YET"
+    var currentStepName: String = "NO CURRENT STEP YET"
     
     fileprivate var missingStepsImplementations = [String]()
     
-    func gherkinStepsAndMatchesMatchingExpression(_ expression: String) -> [(step:Step, match:NSTextCheckingResult)] {
-        let range = NSMakeRange(0, expression.characters.count)
-        let matches = self.steps.map { (step: Step) -> (step:Step, match:NSTextCheckingResult)? in
+    func gherkinStepsAndMatchesMatchingExpression(_ expression: String) -> [(step: Step, match: NSTextCheckingResult)] {
+        let range = NSMakeRange(0, expression.count)
+        return self.steps.flatMap { (step: Step) -> (step: Step, match: NSTextCheckingResult)? in
             if let match = step.regex.firstMatch(in: expression, options: [], range: range) {
                 return (step:step, match:match)
             } else {
                 return nil
             }
-        }.flatMap { $0 }
-        return matches
+        }
     }
     
     func gherkinStepsMatchingExpression(_ expression: String) -> [Step] {
@@ -284,7 +283,7 @@ extension XCTestCase {
             // TODO: This should really only need to be a map function :(
             var matchStrings = Array<String>()
             for i in 1..<match.numberOfRanges {
-                let range = match.rangeAt(i)
+                let range = match.range(at: i)
                 let string = range.location != NSNotFound ? (expression as NSString).substring(with: range) : ""
                 matchStrings.append(string)
             }
