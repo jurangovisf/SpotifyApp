@@ -1,0 +1,6 @@
+#iOS configuration circle ci file
+#
+#version: 2
+#jobs:
+#  build:
+
