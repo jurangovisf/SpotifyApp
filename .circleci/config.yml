@@ -9,19 +9,19 @@ jobs:
       - checkout
       #install cocoapods
       - run:
-        name: Install CocoaPods
-        command: pod install
+          name: Install CocoaPods
+          command: pod install
       #update cocoapods
       - run:
-        name: Update CocoaPods
-        command: pod update
+          name: Update CocoaPods
+          command: pod update
       #build the app and run test
       - run:
-        name: Build and run tests
-        command: fastlane scan
-        environment:
-          SCAN_DEVICE: iPhone 8
-          SCAN_SCHEME: SpotifyApp
+          name: Build and run tests
+          command: fastlane scan
+          environment:
+            SCAN_DEVICE: iPhone 8
+            SCAN_SCHEME: SpotifyApp
       
       # Collect XML test results data to show in the UI,
       # and save the same XML files under test-results folder
